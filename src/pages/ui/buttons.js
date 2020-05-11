@@ -50,7 +50,7 @@ export default class Login extends React.Component {
                 <Card title="按钮组">
                     <Button.Group>
                     <Button type="primary" icon = {<LeftOutlined />} style={{margin:'0'}}>返回</Button>
-                    <Button type="primary" icon = {<RightOutlined />} style={{margin:'0'}}>前进</Button>
+                    <Button type="primary" style={{margin:'0'}}>{<span>前进<RightOutlined /></span>}</Button>
                     </Button.Group>
                 </Card>
                 <Card title="按钮尺寸" className="card-wrap">
