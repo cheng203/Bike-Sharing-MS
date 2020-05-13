@@ -1,23 +1,21 @@
 import React from 'react'
-import {Card, Button, message} from 'antd'
-import 'antd/dist/antd.css';
+import { Card, Button, message } from 'antd'
 import './ui.less'
+export default class Buttons extends React.Component {
 
-export default class Messages extends React.Component {
-
-    getMessage = (data)=> {
-        message[data]("恭喜您，React课程晋级成功");
+    showMessage = (type)=>{
+        message[type]("恭喜你，React课程晋级成功");
     }
 
-    render() {
+    render(){
         return (
-            <div className="display">
+            <div>
                 <Card title="全局提示框" className="card-wrap">
-                    <Button type="primary" onClick={()=>this.getMessage('success')}>Success</Button>
-                    <Button type="primary" onClick={()=>this.getMessage('info')}>Info</Button>
-                    <Button type="primary" onClick={()=>this.getMessage('warning')}>Warning</Button>
-                    <Button type="primary" onClick={()=>this.getMessage('error')}>Error</Button>
-                    <Button type="primary" onClick={()=>this.getMessage('loading')}>Loading</Button>
+                    <Button type="primary" onClick={()=>this.showMessage('success')}>Success</Button>
+                    <Button type="primary" onClick={()=>this.showMessage('info')}>Info</Button>
+                    <Button type="primary" onClick={()=>this.showMessage('warning')}>Warning</Button>
+                    <Button type="primary" onClick={()=>this.showMessage('error')}>Error</Button>
+                    <Button type="primary" onClick={()=>this.showMessage('loading')}>Loading</Button>
                 </Card>
             </div>
         );
